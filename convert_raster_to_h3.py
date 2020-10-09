@@ -3,9 +3,9 @@ import h3
 import csv
 
 datasets_dir = 'datasets'
-sub_dir = 'accessiblity'
-input_filename = 'ghana_accessiblity_raster.tiff'
-output_filename = 'ghana_accessiblity_h3.csv'
+sub_dir = 'accessibility'
+input_filename = 'ghana_accessibility_raster.tiff'
+output_filename = 'ghana_accessibility_h3.csv'
 
 f = rasterio.open('./' + datasets_dir + '/' + sub_dir + '/' + input_filename)
 band1 = f.read(1)

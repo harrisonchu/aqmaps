@@ -1,2 +1,4 @@
 rasterio
 h3
+pandas
+shapely

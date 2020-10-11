@@ -2,3 +2,6 @@ rasterio
 h3
 pandas
 shapely
+
+python-dotenv
+flask

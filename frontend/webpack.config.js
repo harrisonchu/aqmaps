@@ -4,7 +4,7 @@ module.exports = {
     context: __dirname,
     entry: './src/index.jsx',
     output: {
-        path: path.resolve(__dirname),
+        path: path.resolve(__dirname) + "/../static",
         filename: 'bundle.js'
     },
     resolve: {

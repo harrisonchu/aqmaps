@@ -7,9 +7,10 @@ load_dotenv()
 
 @app.route("/")
 def index():
-    return render_template("./frontend/index.html")
-
+    return render_template("index.html")
 
 @app.route("/api/hello")
 def hello():
     return "Hello World"
+
+app.run(debug=True)

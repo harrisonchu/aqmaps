@@ -3,15 +3,18 @@ import { processGeojson } from 'kepler.gl/processors';
 
 import defaultGeoJson from '../data/gh_districts_with_accessibility.geojson.json';
 
-export const fetchDataset = () => (dispatch) => {
+export const fetchCountryDataset = (country) => (dispatch) => {
+    const data = processGeojson(defaultGeoJson);
+    const info = {
+        label: 'Districts of Ghana',
+        id: 'default_dataset_ghana'
+    };
+
     dispatch(
         addDataToMap({
             datasets: {
-                info: {
-                    label: 'Districts of Ghana',
-                    id: 'default_dataset_ghana'
-                },
-                data: processGeojson(defaultGeoJson)
+                info,
+                data
             },
             option: {
                 centerMap: true,

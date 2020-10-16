@@ -2,8 +2,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import KeplerGl from 'kepler.gl';
+import * as util from '../../util/util';
 
-import { fetchDataset } from '../../actions/datasetActions';
+import { fetchCountryDataset } from '../../actions/datasetActions';
 
 class Map extends React.Component {
     constructor(props) {
@@ -11,7 +12,12 @@ class Map extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchDataset();
+        const searchStr = this.props.location.search;
+        const country = util.getQueryParam(searchStr, 'c');
+
+        if (country) {
+            this.props.fetchCountryDataset(country);
+        }
     }
 
     render() {
@@ -28,7 +34,7 @@ class Map extends React.Component {
 
 const mapDispatchToProps = (dispatch) => {
     return ({
-        fetchDataset: () => dispatch(fetchDataset())
+        fetchCountryDataset: () => dispatch(fetchCountryDataset())
     });
   };
   

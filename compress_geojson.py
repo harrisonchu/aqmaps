@@ -28,7 +28,7 @@ def _lower_resolution_v2(list_of_coords, reduction_factor):
         result.append(coord)
 
         # ensure that we always append the last coordinate to enclose the area
-    if int(str(list_of_coords[-1][0][-1])) < reduction_factor:
+    if int(str(list_of_coords[-1][0])[-1]) < reduction_factor:
         result.append(list_of_coords[-1])
 
     return result

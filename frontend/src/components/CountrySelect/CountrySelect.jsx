@@ -73,7 +73,7 @@ const CountrySelect = (props) => {
                 )}
             />
 
-            <NavButton text={"Map it"} handleClick={handleButtonClick} />
+            <NavButton text={"EXPLORE"} handleClick={handleButtonClick} />
         </div>
     );
 }

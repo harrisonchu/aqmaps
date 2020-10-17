@@ -4,9 +4,9 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
     option: {
-        background: '#125c9c',
+        background: '#065B7F',
         '&:hover': {
-            background: '#196fb9',
+            background: '#077BAB',
          },
         marginLeft: 20
     }

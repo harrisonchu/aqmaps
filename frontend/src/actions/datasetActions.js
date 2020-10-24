@@ -1,7 +1,7 @@
 import { addDataToMap } from 'kepler.gl/actions';
 import { processGeojson } from 'kepler.gl/processors';
 
-import defaultGeoJson from '../data/gh_districts_with_accessibility.geojson.json';
+import defaultGeoJson from '../data/gh_compress.geojson.json';
 
 export const fetchCountryDataset = (country) => (dispatch) => {
     const data = processGeojson(defaultGeoJson);

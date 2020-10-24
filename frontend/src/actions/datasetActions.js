@@ -20,7 +20,40 @@ export const fetchCountryDataset = (country) => (dispatch) => {
                 centerMap: true,
                 readOnly: false
             },
-            config: {}
+            config: {
+                visState: {
+                    filters: [
+                      {
+                        id: 'mean_diarrhea',
+                        dataId: 'default_dataset_ghana',
+                        name: 'mean_diarrhea',
+                        type: 'real',
+                        plotType: 'histogram'
+                      },
+                      {
+                        id: 'mean_accessibility',
+                        dataId: 'default_dataset_ghana',
+                        name: 'mean_accessibility',
+                        type: 'real',
+                        plotType: 'histogram'
+                      },
+                      {
+                        id: 'mean_od',
+                        dataId: 'default_dataset_ghana',
+                        name: 'mean_od',
+                        type: 'real',
+                        plotType: 'histogram'
+                      },
+                      {
+                        id: 'mean_edu',
+                        dataId: 'default_dataset_ghana',
+                        name: 'mean_edu',
+                        type: 'real',
+                        plotType: 'histogram'
+                      }
+                    ]
+                  }
+            }
         })
     );
 }

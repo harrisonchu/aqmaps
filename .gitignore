@@ -1,6 +1,5 @@
 __pycache__/*
 .vscode
 /workspace
-/datasets
 */node_modules
 */package-lock.json

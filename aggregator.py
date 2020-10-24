@@ -3,8 +3,9 @@ import json
 import pandas as pd
 from shapely.geometry import Point, Polygon
 
-mapping = json.load(open('./datasets/accessibility/ghana_accessibility_h3.json'))
-data = json.load(open('./datasets/gh_districts.geojson'))
+measure = 'od'
+mapping = json.load(open('./datasets/' + measure + '/gh_' + measure + '_h3.json'))
+data = json.load(open('./gh_compress_9.geojson'))
 
 df = pd.DataFrame(data['features'])
 length = len(df)
@@ -39,7 +40,12 @@ for feature_idx in range(length):
 
     processed += count
     
-    data['features'][feature_idx]['properties']['avg_accessibility'] = sum_of_vals / count #add average to geojson
+    metric_name = 'mean_' + measure
+
+    if count == 0:
+        data['features'][feature_idx]['properties'][metric_name] = None
+    else:
+        data['features'][feature_idx]['properties'][metric_name] = sum_of_vals / count #add average to geojson
 
 print('done')
 print(processed)

@@ -4,9 +4,9 @@ import csv
 import json
 
 datasets_dir = 'datasets'
-sub_dir = 'accessibility'
-input_filename = 'ghana_accessibility_raster.tiff'
-output_filename = 'ghana_accessibility_h3.json'
+sub_dir = 'od'
+input_filename = 'gh_od_raster.tiff'
+output_filename = 'gh_od_h3.json'
 
 f = rasterio.open('./' + datasets_dir + '/' + sub_dir + '/' + input_filename)
 band1 = f.read(1)

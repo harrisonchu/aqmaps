@@ -5,6 +5,7 @@ import KeplerGl from 'kepler.gl';
 import * as util from '../../util/util';
 
 import { fetchCountryDataset } from '../../actions/datasetActions';
+import { initMapConfig } from '../../actions/mapConfigActions';
 
 class Map extends React.Component {
     constructor(props) {
@@ -16,8 +17,9 @@ class Map extends React.Component {
         const country = util.getQueryParam(searchStr, 'c');
 
         if (country) {
+            this.props.initMapConfig();
             this.props.fetchCountryDataset(country);
-        }
+        };
     }
 
     render() {
@@ -34,7 +36,8 @@ class Map extends React.Component {
 
 const mapDispatchToProps = (dispatch) => {
     return ({
-        fetchCountryDataset: () => dispatch(fetchCountryDataset())
+        fetchCountryDataset: () => dispatch(fetchCountryDataset()),
+        initMapConfig: () => dispatch(initMapConfig()),
     });
   };
   

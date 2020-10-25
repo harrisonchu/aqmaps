@@ -1,0 +1,20 @@
+.map-page-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+
+    .right-panel {
+        width: 100%;
+        max-width: 300px;
+        background-color: white;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .info {
+            font-size: 12px;
+            width: 85%;
+        }
+    }
+}

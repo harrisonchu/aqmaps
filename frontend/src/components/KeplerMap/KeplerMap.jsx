@@ -26,9 +26,9 @@ class KeplerMap extends React.Component {
         return (
             <KeplerGl
                 id="kepler-map-1"
-                width={window.innerWidth}
+                width={this.props.width}
                 mapboxApiAccessToken={'pk.eyJ1Ijoic2Fza2F0Y2h1d2FuIiwiYSI6ImNrZzRrMmwzMzBsZnYyc28zMWl1ZHV6OTUifQ.JZxanEzPzHMaFA97pv7fgw'}
-                height={window.innerHeight}
+                height={this.props.height}
             />
         )
     }

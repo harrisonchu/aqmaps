@@ -1,5 +1,5 @@
 import React from 'react';
-import CountrySelect from '../CountrySelect/CountrySelect';
+import CountrySelect from '../../components/CountrySelect/CountrySelect';
 
 import './LandingPage.scss';
 

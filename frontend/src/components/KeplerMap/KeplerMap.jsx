@@ -7,7 +7,7 @@ import * as util from '../../util/util';
 import { fetchCountryDataset } from '../../actions/datasetActions';
 import { initMapConfig } from '../../actions/mapConfigActions';
 
-class Map extends React.Component {
+class KeplerMap extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -41,4 +41,4 @@ const mapDispatchToProps = (dispatch) => {
     });
   };
   
-export default connect(null,mapDispatchToProps)(Map);
+export default connect(null,mapDispatchToProps)(KeplerMap);
